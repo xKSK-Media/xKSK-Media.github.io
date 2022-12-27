@@ -15,7 +15,7 @@
                 <p class="HomeDescription">Don't waste your capital on unsuccessful and ineffective brand deals and sponsorships.</p>
                 <p class="HomeDescription">It's time to make your sponsorship budget count, grow your brand and explode your sales.</p>
 
-                <div class="CallButton">
+                <div class="CallButton" onclick="ScrollToCallSection()">
                     <p class="CallButtonText">Speak To Our Team Today</p>
                     <p class="CallButtonSubText">Schedule Your Free Call Today</p>
                 </div>
@@ -24,18 +24,18 @@
             <div class="HomeWrap2">
                 <div class="HomeContainer">
                     <div class="HomeImageWrap">
-                        <img class="HomeImage" src="">
+                        <img class="HomeImage" src="TikTok.png">
                     </div>
                     <div class="HomeImageWrap">
-                        <img class="HomeImage" src="">
+                        <img class="HomeImage" src="Instagram.png">
                     </div>
                 </div>
                 <div class="HomeContainer">
                     <div class="HomeImageWrap">
-                        <img class="HomeImage" src="">
+                        <img class="HomeImage" src="Youtube.png">
                     </div>
                     <div class="HomeImageWrap">
-                        <img class="HomeImage" src="">
+                        <img class="HomeImage" src="Twitch.png">
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="CallButton">
+                    <div class="CallButton" onclick="ScrollToCallSection()">
                         <p class="CallButtonText">Speak To Our Team Today</p>
                         <p class="CallButtonSubText">Schedule Your FREE Call Today</p>
                     </div>
@@ -101,7 +101,7 @@
                     most value we can.
                     </p>
 
-                    <div class="CallButton">
+                    <div class="CallButton" onclick="ScrollToCallSection()">
                         <p class="CallButtonText">Speak To Our Team Today</p>
                         <p class="CallButtonSubText">Schedule Your FREE Call Today</p>
                     </div>
@@ -135,18 +135,56 @@
                     endorsement and promotions at a premium price, ensuring that all content is delivered at the highest of standards, allowing the necessary growth our clients'
                     brands need to conquer their competition.</p>
 
-                    <div class="CallButton">
+                    <div class="CallButton" onclick="ScrollToCallSection()">
                         <p class="CallButtonText">Speak To Our Team Today</p>
                         <p class="CallButtonSubText">Schedule Your FREE Call Today</p>
                     </div>
                 </div>
 
                 <div class="PartnerWrap2">
-                    <p class="PartnerDescription2">Coming Soon</p>
+                    <div class="PartnerContentWrap">
+                        <div class="PFPContentWrapper">
+                            <div class="PFPWrap">
+                                <img class="PFP" src="PlaceholderPic.jpeg">
+                            </div>
+
+                            <p class="PFPName">Khattab Khairdeen</p>
+                            <p class="PFPRole">FOUNDER</p>
+                        </div>
+
+                        <div class="PFPContentWrapper">
+                            <div class="PFPWrap">
+                                <img class="PFP" src="PlaceholderPic.jpeg">
+                            </div>
+
+                            <p class="PFPName">COMING</p>
+                            <p class="PFPRole">SOON</p>
+                        </div>
+                    </div>
+
+                    <div class="PartnerContentWrap">
+                        <div class="PFPContentWrapper">
+                            <div class="PFPWrap">
+                                <img class="PFP" src="PlaceholderPic.jpeg">
+                            </div>
+
+                            <p class="PFPName">COMING</p>
+                            <p class="PFPRole">SOON</p>
+                        </div>
+
+                        <div class="PFPContentWrapper">
+                            <div class="PFPWrap">
+                                <img class="PFP" src="PlaceholderPic.jpeg">
+                            </div>
+
+                            <p class="PFPName">COMING</p>
+                            <p class="PFPRole">SOON</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="CallSection">
+            <div class="CallSection" id="CallSection">
                 <img class="CallBG" src="BG2.jpeg">
 
                 <div class="CallWrap">
@@ -189,7 +227,7 @@
                     <h1 class="CallTitle2">Free 20-Minute Demo Call</h1>
     
                     <div class="PFPWrap">
-                        <img class="PFP" src="">
+                        <img class="PFP" src="PlaceholderPic.jpeg">
                     </div>
 
                     <p class="CallDescription">By the end of the demo call, you will have a clear understanding of the next steps which you can 
@@ -209,7 +247,7 @@
                 </p>
 
                 <div class="EndWrap">
-                    <div class="CallButton">
+                    <div class="CallButton" onclick="ScrollToCallSection()">
                         <p class="CallButtonText">Speak To Our Team Today</p>
                         <p class="CallButtonSubText">Schedule Your FREE Call Today</p>
                     </div>
@@ -235,6 +273,10 @@
                 justify-content: baseline;
 
                 overflow: auto;
+            }
+
+            html{
+                scroll-behavior: smooth;
             }
 
             .Filler{
@@ -426,7 +468,7 @@
                 width: 200px;
                 height: 200px;
 
-                border: 1px solid rgb(255, 0, 119);
+                border: 2px solid rgb(245, 245, 245);
                 border-radius: 100%;
             }
 
@@ -685,6 +727,47 @@
                 align-items: center;
             }
 
+            .PartnerContentWrap{
+                width: 100%;
+                height: 45%;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .PFPContentWrapper{
+                width: 50%;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: baseline;
+            }
+
+            .PFPName{
+                color: rgb(255, 0, 119);
+
+                font-family: Ubuntu;
+                font-size: 1.25em;
+                font-weight: 700;
+
+                margin-block-start: 0.5em;
+                margin-block-end: 0em;
+            }
+
+            .PFPRole{
+                color: rgb(245, 245, 245);
+
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.5em;
+                font-weight: 300;
+
+                margin-block-start: 0em;
+            }
+
             .PartnerTitle{
                 color: rgb(255, 0, 119);
                 font-weight: 600;
@@ -814,27 +897,13 @@
                 margin-block-start: 0em;
             }
 
-            .PFPWrapper{
-                position: relative;
-
-                width: 100%;
-                height: 150px;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                margin-block-end: 0.75em;
-                margin-block-start: 0.5em;
-            }
-
             .PFPWrap{
                 position: relative;
 
                 height: 150px;
                 width: 150px;
 
-                border-radius: 50%;
+                border-radius: 100%;
                 border: 3.5px solid rgb(255, 0, 119);
             }
 
@@ -843,6 +912,8 @@
 
                 width: 100%;
                 height: 100%;
+
+                z-index: -1;
             }
 
             .CallContentWrap{
@@ -953,12 +1024,18 @@
                 width: 33%;
 
                 margin-block-end: 0.5em;
+
+                cursor: pointer;
             }
         </style>
     </head>
 
     <body>
         <script type="text/javascript">
+
+            const ScrollToCallSection = () =>{
+                document.getElementById("CallSection").scrollIntoView();
+            }
 
         </script>
     </body>
